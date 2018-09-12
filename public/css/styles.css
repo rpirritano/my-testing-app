@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.title-container {
+  color: #fff;
+  background-color: #5995DA;  /* Blue */
+  padding: 20px 0;
+  display: flex; /* 1. Set up flex container: this will create the flex container */
+  justify-content: center;/* 2. Define the horizontal alignment for its flex items */
+  /* Other values for justify-content : center, flex-start, flex-end, space-around ,space-between */
+}
+
+.title {
+  /*border: 1px solid #fff;  For debugging */
+  width: 900px;
+  display: flex;
+  justify-content: center;
+}
+
+.form-container {
+  color: #5995DA;
+  background-color: #D6E9FE;
+  display: flex;
+  justify-content: center;
+}
+
+.header {
+  width: 900px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  /* other options for align-items: center, flex-start(top), flex-end (bottom), stretch, baseline */
+}
+
+.submit-button {
+  background-color: white;
+  color: black;
+  border: 2px solid #555555;
+  border-radius: 8px;
+  padding: 10px 24px;
+}
+
+.submit-button:hover {
+  background-color: #555555;
+  color: white;
+}
+
+.photo-grid-container {
+  display: flex;
+  justify-content: center;
+}
+
+.photo-grid {
+  width: 900px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+}
+
+.photo-grid-item {
+  border: 1px solid #fff;
+  width: 300px;
+  height: 300px;
+}
+/*Adding an order property to a flex item defines its order in the container without affecting surrounding items.
+Its default value is 0, and increasing or decreasing it from there moves the item to the right or left, respectively.
+*/
+.first-item {
+  order: 1;
+}
+
+.last-item {
+  order: -1;
+}
+
+.social {
+	width: 600px;
+	height: 120px;
+	border: 3px solid #cccccc;
+	padding: 5px;
+	font-family: Tahoma, sans-serif;
+	background-image: url(bg.gif);
+	background-position: bottom right;
+	background-repeat: no-repeat;
+}
+/* Same values can be used with align-self:  center, flex-start, flex-end, stretch, baseline*/
+.social,
+.subscribe {
+  align-self: flex-end;
+  margin-bottom: 20px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-item {
+  border: 1px solid #fff;
+  background-color: #D6E9FE;
+  height: 200px;
+  flex: 1; /* flex:1 matches the width of the footer, so all have equal length*/
+}
+.footer-three {
+  flex: 2;
+}
+
+.footer-one,
+.footer-three {
+  background-color: #5995DA;
+  flex: initial;  /* flex:inital falls back to the item's explicit width property, called fixed, and wont resize with browser*/
+  width: 300px;
+}
+.signup {
+  margin-left: auto; /* autom margin eats up all extra space in flex container */
+}
