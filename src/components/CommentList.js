@@ -12,10 +12,10 @@ class CommentList extends Component {
 
   render() {
     return (
-      <div>
-        <ul>
+      <div className='footer'>
+        <ol className='footer-item'>
           {this.renderComments()}
-        </ul>
+        </ol>
       </div>
     );
   }
